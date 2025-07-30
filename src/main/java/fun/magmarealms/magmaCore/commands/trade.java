@@ -17,14 +17,13 @@ public class trade implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String label, String[] args) {
 
-        if (sender instanceof Player) {
-            Player player = (Player) sender;
+        if (sender instanceof Player player) {
             Inventory menu = Bukkit.createInventory(player, 9, ChatColor.RED + "Magma TRADE");
 
             ItemStack accept = createItem(Material.GREEN_STAINED_GLASS_PANE, ChatColor.GREEN + "ACCEPT");
             ItemStack deny = createItem(Material.RED_STAINED_GLASS_PANE, ChatColor.RED + "DENY");
             ItemStack none = createItem(Material.GRAY_STAINED_GLASS_PANE, " ");
-
+            
             menu.setItem(0,accept);
             menu.setItem(1,none);
             menu.setItem(2,none);

@@ -14,7 +14,6 @@ public final class MagmaCore extends JavaPlugin {
         Objects.requireNonNull(getCommand("pl")).setExecutor(new fun.magmarealms.magmaCore.commands.pluginsEcho());
         Objects.requireNonNull(getCommand("plugins")).setExecutor(new fun.magmarealms.magmaCore.commands.pluginsEcho());
         Objects.requireNonNull(getCommand("trade")).setExecutor(new fun.magmarealms.magmaCore.commands.trade());
-
         // Events
         getServer().getPluginManager().registerEvents(new TradeHandler(), this);
 
