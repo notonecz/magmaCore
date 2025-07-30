@@ -4,14 +4,16 @@ import fun.magmarealms.magmaCore.events.TradeHandler;
 import org.bukkit.event.inventory.TradeSelectEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Objects;
+
 public final class MagmaCore extends JavaPlugin {
 
     @Override
     public void onEnable() {
         // Commands
-        getCommand("pl").setExecutor(new fun.magmarealms.magmaCore.commands.pluginsEcho());
-        getCommand("plugins").setExecutor(new fun.magmarealms.magmaCore.commands.pluginsEcho());
-        getCommand("trade").setExecutor(new fun.magmarealms.magmaCore.commands.trade());
+        Objects.requireNonNull(getCommand("pl")).setExecutor(new fun.magmarealms.magmaCore.commands.pluginsEcho());
+        Objects.requireNonNull(getCommand("plugins")).setExecutor(new fun.magmarealms.magmaCore.commands.pluginsEcho());
+        Objects.requireNonNull(getCommand("trade")).setExecutor(new fun.magmarealms.magmaCore.commands.trade());
 
         // Events
         getServer().getPluginManager().registerEvents(new TradeHandler(), this);
