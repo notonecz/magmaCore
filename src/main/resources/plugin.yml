@@ -1,5 +1,5 @@
 name: MagmaCore
-version: '1.0-SNAPSHOT'
+version: '1.1-beta'
 main: fun.magmarealms.magmaCore.MagmaCore
 api-version: '1.18'
 authors: [NOT_ONE, ImNotPokw]
@@ -12,3 +12,6 @@ commands:
   plugins:
     description: Replace /plugin with custom output
     usage: /plugins
+  trade:
+    description: Trade with player
+    usage: /trade
