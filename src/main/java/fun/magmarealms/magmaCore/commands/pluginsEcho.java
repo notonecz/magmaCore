@@ -13,7 +13,6 @@ public class pluginsEcho implements CommandExecutor {
     public boolean onCommand(CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
         if (sender.isOp() || sender.hasPermission("MagmaCore.plugins")) {
             Bukkit.dispatchCommand(sender, "bukkit:pl");
-            return true;
         }
         else {
             sender.sendMessage(
@@ -24,7 +23,7 @@ public class pluginsEcho implements CommandExecutor {
                             ChatColor.RESET + ", " +
                             ChatColor.GREEN + "business"
             );
-            return true;
         }
+        return true;
     }
 }
