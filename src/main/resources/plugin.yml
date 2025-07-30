@@ -1,0 +1,14 @@
+name: MagmaCore
+version: '1.0-SNAPSHOT'
+main: fun.magmarealms.magmaCore.MagmaCore
+api-version: '1.18'
+authors: [NOT_ONE, ImNotPokw]
+description: magmarealms (boxfight core)
+website: magmarelams.fun
+commands:
+  pl:
+    description: Replace /pl with custom output
+    usage: /pl
+  plugins:
+    description: Replace /plugin with custom output
+    usage: /plugins
